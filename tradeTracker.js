@@ -124,9 +124,10 @@ var tradeTracker = {
 		}
 		if(tester){
 			tradeTracker.stopTracking(art,obj);
-			alert(tradeTracker.data.lFoundAlert);
 			var notify = new Notification("Thanks for letting notify you");
-			UI.Notification.show(Format.image_src("notification/report_world_end.png"),_("3b91a73f7c6c25e359dc129944e1515a"),_("21cd77f1b7feddd587727b82b30a7a82"))
+			var notification = new Notification("Hi there!");
+			UI.Notification.show(Format.image_src("notification/report_world_end.png"),_("3b91a73f7c6c25e359dc129944e1515a"),_("21cd77f1b7feddd587727b82b30a7a82"));
+			alert(tradeTracker.data.lFoundAlert);
 		} else {
 			if(reran){
 				setTimeout(function(){tradeTracker.tracking(art,obj);},10000);
