@@ -124,11 +124,8 @@ var tradeTracker = {
 		}
 		if(tester){
 			tradeTracker.stopTracking(art,obj);
-			//alert(tradeTracker.data.lFoundAlert);
-			var mailNotification = new Notification("Биржа", {
-			    tag : "ache-mail",
-			    body : "Привет, высылаю материалы по проекту...",
-			});
+			alert(tradeTracker.data.lFoundAlert);
+			var notify = new Notification("Thanks for letting notify you");
 		} else {
 			if(reran){
 				setTimeout(function(){tradeTracker.tracking(art,obj);},10000);
